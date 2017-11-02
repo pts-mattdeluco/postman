@@ -46,7 +46,7 @@ var BigMac = function () {
         var ts = Math.floor((new Date()).getTime() / 1000),
             reqUrl = url.parse(substituteEnvVars(request.url)),
             nonce = generateNonce(),
-            extension = generateExt(request.headers['Content-Type'], substituteEnvVars(request.data));
+            extension = generateExt(request.headers['content-type'], substituteEnvVars(request.data));
 
         var normalizedRequestString = [
             ts,
