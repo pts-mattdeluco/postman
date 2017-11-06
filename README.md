@@ -40,10 +40,10 @@ some environment variables - these should not be modified by hand:
 #### Conventions
 Environment variables are named by convention.
 
-* Variables generated programmatically beging with a leading underscore
-  * ex: \_accountId
+* Variables generated programmatically begin with a leading underscore
+  * \_accountId
 * Variables used in the request header are uppercase
-  * ex: \_AUTH\_HEADER (programmatically generated, and an http header value)
+  * \_AUTH\_HEADER (programmatically generated, and an http header value)
 
 ## Requests
 
@@ -60,10 +60,22 @@ lpid:
 
 ### Conventions
 With a few exceptions request names follow a prefix convention based
-on the HTTP method used:
+on the HTTP method used.  These names are inteded to mimic the
+conventions used in the [PyLCP project](https://github.com/Points/PyLCP)
+[LCPCrud class](https://github.com/Points/PyLCP/blob/master/pylcp/crud/base.py#L57).
 
 * GET: request names start with "Get"
 * POST: request names start with "Create"
 * PUT: request names start with "Update"
 * PATCH: request names start with "Modify"
 * DELETE: request names starte with "Delete"
+
+### Request Body
+Any request that requires a body should be pre-populated with an
+*example* body.  This gives the user an idea of the necessary
+properties and data structure that the LCP expects for that request.
+
+Use the example body by "filling in the blanks".  When finished
+with a particular request where changes have been made to the body,
+close but **do not save** the request.  This ensures that the
+example body remains intact the next time the request is to be used.
