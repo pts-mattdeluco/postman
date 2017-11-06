@@ -9,7 +9,7 @@ Intended for the [Postman Native App](https://www.getpostman.com).
 ## LCP API.postman\_collection.json
 A series of Postman requests for interacting with the LCP API.
 
-These requests are designed to be *mostly* immutable (i.e. they do not change.)
+These requests are designed to be **mostly** immutable (i.e. they **do not change**.)
 Variations or input is mostly handled using environment variables.
 POST/PUT/PATCH bodies are intended to be "fill-in-the-blank" examples
 and should not be saved permanently after making a request.
