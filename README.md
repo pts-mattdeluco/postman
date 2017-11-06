@@ -3,6 +3,16 @@ Postman request collections for the LCP.
 
 Intended for the [Postman Native App](https://www.getpostman.com).
 
+## Quick Start
+Download LCP API.postman\_collection.json and import into Postman.
+
+Setup one environment with a macKeyId and macKey (from console),
+and one lpid - Global Rewards, for example:
+* 43f39a8f-cac9-4957-8480-a83b6093cfe3 (production)
+* 3d94b74b-9ed6-4620-8f5c-9d7a37eff5a8 (staging)
+
+Get the LP details using the request found under LCP API -> LPs -> Get LP.
+
 ## Reference
 * [LCP API Reference](http://points.github.io/Loyalty-Commerce-Platform/?doc=api-reference)
 
@@ -16,16 +26,6 @@ and should not be saved permanently after making a request.
 
 The requests should **not** be modified to accommodate different
 environments (see Environment below.)
-
-### Quick Start
-Download LCP API.postman\_collection.json and import into Postman.
-
-Setup one environment with a macKeyId and macKey (from console),
-and one lpid - Global Rewards, for example:
-* 43f39a8f-cac9-4957-8480-a83b6093cfe3 (production)
-* 3d94b74b-9ed6-4620-8f5c-9d7a37eff5a8 (staging)
-
-Get the LP details using the request found under LCP API -> LPs -> Get LP.
 
 ### Environment
 An environment should be created for each macKeyId.  For each app
