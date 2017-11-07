@@ -6,7 +6,7 @@ Intended for the [Postman Native App](https://www.getpostman.com).
 ## Quick Start
 Download LCP API.postman\_collection.json and import into Postman.
 
-Setup one environment with a macKeyId and macKey (from console),
+Setup one environment with a url, macKeyId, macKey (from console),
 and one lpid - Global Rewards, for example:
 * 43f39a8f-cac9-4957-8480-a83b6093cfe3 (production)
 * 3d94b74b-9ed6-4620-8f5c-9d7a37eff5a8 (staging)
@@ -15,6 +15,10 @@ Get the LP details using the request found under LCP API -> LPs -> Get LP.
 
 ## Reference
 * [LCP API Reference](http://points.github.io/Loyalty-Commerce-Platform/?doc=api-reference)
+
+### LCP URLs
+* staging: https://staging.lcp.points.com/v1
+* production: https://lcp.points.com/v1
 
 ## LCP API.postman\_collection.json
 A series of Postman requests for interacting with the LCP API.
@@ -35,6 +39,7 @@ another for production.
 The following environment variables are those most commonly used
 in the requests found in this project:
 
+* url: the LCP URL for the environment being configured
 * macKeyId: from your account or app, necessary for authentication
 * macKey: from your account or app, necessary for authentication
 * lpid: A loyalty program ID
