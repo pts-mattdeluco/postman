@@ -6,7 +6,7 @@ Intended for the [Postman Native App](https://www.getpostman.com).
 ## Quick Start
 Download LCP API.postman\_collection.json and import into Postman.
 
-Setup one environment with a [url](#lcp-urls), macKeyId and macKey (from console),
+Setup one [environment](#environment) with a [url](#lcp-urls), macKeyId and macKey (from console),
 and one lpid - [Global Rewards](#global-rewards), for example.
 
 Get the LP details using the request found under LCP API > LPs > Get LP.

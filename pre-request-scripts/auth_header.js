@@ -1,5 +1,6 @@
-let url = require('url'),
-    crypto = require('crypto-js');
+var url = require('url'),
+    crypto = require('crypto-js'),
+    _ = require('lodash');
 
 var substituteEnvVars = function (varStr) {
     var match;
@@ -24,7 +25,8 @@ var BigMac = function () {
 
     var generateExt = function (contentType, payload) {
         var extension = '';
-        if (contentType && payload) {
+
+        if (contentType && !_.isEmpty(payload)) {
             var hasher = crypto.algo.SHA1.create();
 
             hasher.update(contentType);
@@ -32,6 +34,7 @@ var BigMac = function () {
 
             extension = hasher.finalize().toString();
         }
+
         return extension;
     };
 
@@ -73,5 +76,5 @@ var BigMac = function () {
     };
 }();
 
-pm.environment.set('AUTH_HEADER', BigMac.generateAuthHeader(
+pm.environment.set('_AUTH_HEADER', BigMac.generateAuthHeader(
     environment.macKeyId, environment.macKey, request));
